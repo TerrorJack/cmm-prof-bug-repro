@@ -1,0 +1,26 @@
+cabal-version: 3.0
+name: foo
+version: 0
+build-type:     Simple
+
+library
+  default-language: Haskell2010
+
+  build-depends: rts, ghc-prim, base
+
+  ghc-options: -Wall
+
+  cmm-sources: cbits/Foo.cmm
+
+  hs-source-dirs: src
+
+  exposed-modules: Foo
+
+executable foo
+  default-language: Haskell2010
+
+  hs-source-dirs: app
+
+  main-is: foo.hs
+
+  build-depends: base, foo

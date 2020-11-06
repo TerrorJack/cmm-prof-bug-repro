@@ -1,0 +1,6 @@
+#include "Cmm.h"
+
+succ (W_ x)
+{
+    return (x + 1);
+}
